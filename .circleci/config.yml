@@ -4,7 +4,7 @@ orbs:
   python: circleci/python@0.2.1
 
 jobs:
-  convert-dz1:
+  convert-DZ1:
     executor: python/default
     steps:
       - checkout
@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Jupyter get HTML
           command: |
-            jupyter nbconvert —execute —to html DZ1.ipynb
+            jupyter nbconvert DZ1.ipynb
       - store_artifacts:
           path: ./DZ1.html
 
